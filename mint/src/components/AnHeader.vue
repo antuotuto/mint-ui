@@ -2,7 +2,7 @@
 <div class="header">
   <mt-header title="文章的标签">
     <div slot="left">
-      <mt-button icon="back">返回</mt-button>
+      <mt-button icon="back" @click="history">返回</mt-button>
     </div>
     <mt-button icon="" slot="right">主页</mt-button>
   </mt-header>
@@ -10,7 +10,9 @@
 </template>
 
 <script>
-import { Indicator } from 'mint-ui';
+import {
+  Indicator
+} from 'mint-ui';
 
 export default {
   data() {
@@ -21,6 +23,9 @@ export default {
   methods: {
     handleClose() {
       alert('close this page');
+    },
+    history() {
+      window.history.go(-1);
     }
   },
 }

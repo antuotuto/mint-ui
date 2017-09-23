@@ -1,15 +1,47 @@
 <template>
 <div class="home">
   <AnHeader></AnHeader>
-  <mt-swipe :auto="4000">
-    <mt-swipe-item>1</mt-swipe-item>
-    <mt-swipe-item>2</mt-swipe-item>
-    <mt-swipe-item>3</mt-swipe-item>
-  </mt-swipe>
-
-  <mt-switch v-model="value">开关</mt-switch>
-
-  <mt-spinner type="double-bounce" color="#26a2ff" :size="60"></mt-spinner>
+  <div class="logo">
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+  </div>
 </div>
 </template>
 
@@ -20,25 +52,31 @@ import {
   SwipeItem
 } from 'mint-ui';
 
-
 export default {
   data() {
     return {
-      value:''
+      value: ''
     }
   },
   methods: {
 
   },
   components: {
-    AnHeader,
+    AnHeader
   }
 }
 </script>
 
 <style>
 .mint-swipe {
-  height: 1000px;
+  height: 300px;
   background: #eee;
+}
+.home{
+  height:100%;
+  overflow-y: scroll;
+}
+.logo{
+  padding: 15px;
 }
 </style>
