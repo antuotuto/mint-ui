@@ -11,12 +11,16 @@ Vue.use(MintUI)
 // 默认css样式
 import './assets/css/delay.css'
 
+// vuex
+import store from './store'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

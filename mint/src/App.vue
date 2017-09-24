@@ -1,18 +1,45 @@
 <template>
 <div id="app">
+  <mt-header title="王安安" class="homeHeader">
+    <div slot="left">
+      <mt-button type="primary" @click="menuOn">Menu</mt-button>
+    </div>
+  </mt-header>
+  <leftMenu></leftMenu>
   <router-view></router-view>
-  <ul>
-    <li class="">1</li>
-    <li class="">2</li>
-    <li class="">3</li>
-    <li class="">4</li>
-  </ul>
 </div>
 </template>
 
 <script>
+import leftMenu from '@/components/leftMenu.vue'
+import {
+  mapMutations
+} from 'vuex'
+
 export default {
-  name: 'app'
+  name: 'app',
+  data() {
+    return {
+      currentView: 'view-main',
+    }
+  },
+  components: {
+    leftMenu
+  },
+  methods:{
+    menuOn() {
+      if (this.currentView == 'view-main') {
+        this.currentView = 'view-down'
+        this.setLogo(false)
+      } else {
+        this.currentView = 'view-main'
+        this.setLogo(true)
+      }
+    },
+    ...mapMutations({
+      setLogo: 'SET_LOGO'
+    })
+  }
 }
 </script>
 
@@ -21,21 +48,13 @@ export default {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  padding-bottom: 50px;
   overflow: hidden;
+  padding-top: 40px;
 }
-
-ul {
-  width: 100%;
+.homeHeader{
   position: absolute;
-  bottom: 0;
-  background: #eee;
-}
-
-li {
-  line-height: 50px;
-  text-align: center;
-  width: 25%;
-  float: left;
+  top:0;
+  left: 0;
+  width:100%;
 }
 </style>

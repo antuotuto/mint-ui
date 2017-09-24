@@ -1,6 +1,5 @@
 <template>
 <div class="home">
-  <AnHeader></AnHeader>
   <mt-swipe :auto="4000">
     <mt-swipe-item>1</mt-swipe-item>
     <mt-swipe-item>2</mt-swipe-item>
@@ -18,21 +17,32 @@ import {
 
 export default {
   data() {
-    return {}
+    return {
+      currentView: 'view-main',
+    }
   },
   methods: {
-
+    history() {
+      window.history.go(-1);
+    },
   },
   components: {
-    AnHeader
+    AnHeader,
   }
 }
 </script>
 
 <style>
-.mint-swipe{
-  height:300px;
+.mint-swipe {
+  height: 300px;
   background: #eee;
 }
 
+.homeHeader {
+  background: #20A0FF;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 </style>

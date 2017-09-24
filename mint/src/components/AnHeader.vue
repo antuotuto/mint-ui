@@ -1,5 +1,5 @@
 <template>
-<div class="header">
+<div class="AnHeader">
   <mt-header title="文章的标签">
     <div slot="left">
       <mt-button icon="back" @click="history">返回</mt-button>
@@ -32,5 +32,11 @@ export default {
 </script>
 
 <style>
+.AnHeader{
+  width:100%;
+  position: absolute;
+  top:0;
+  left:0;
+}
 
 </style>
