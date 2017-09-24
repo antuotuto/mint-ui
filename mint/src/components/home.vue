@@ -40,6 +40,7 @@ export default {
 
 .homeHeader {
   background: #20A0FF;
+  height:50px;
   width: 100%;
   position: absolute;
   top: 0;

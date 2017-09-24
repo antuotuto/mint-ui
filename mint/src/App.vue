@@ -5,6 +5,17 @@
       <mt-button type="primary" @click="menuOn">Menu</mt-button>
     </div>
   </mt-header>
+<p>an</p>
+<p>an</p>
+<p>an</p>
+<p>an</p>
+<p>an</p>
+<p>an</p>
+<p>an</p>
+<p>an</p>
+<p>an</p>
+<p>an</p>
+<p>an</p>
   <leftMenu></leftMenu>
   <router-view></router-view>
 </div>
@@ -48,7 +59,6 @@ export default {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
   padding-top: 40px;
 }
 .homeHeader{
@@ -57,4 +67,5 @@ export default {
   left: 0;
   width:100%;
 }
+
 </style>
