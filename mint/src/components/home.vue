@@ -5,11 +5,17 @@
     <mt-swipe-item>2</mt-swipe-item>
     <mt-swipe-item>3</mt-swipe-item>
   </mt-swipe>
+  <articleContent></articleContent>
+  <articleContent></articleContent>
+  <articleContent></articleContent>
+  <articleContent></articleContent>
+  <articleContent></articleContent>
 </div>
 </template>
 
 <script>
-import AnHeader from '@/components/AnHeader.vue'
+import articleContent from '@/components/articleContent.vue'
+
 import {
   Swipe,
   SwipeItem
@@ -27,15 +33,15 @@ export default {
     },
   },
   components: {
-    AnHeader,
+    articleContent
   }
 }
 </script>
 
 <style>
 .mint-swipe {
-  height: 300px;
-  background: #eee;
+  height: 100vw;
+  background: #fff;
 }
 
 .homeHeader {
