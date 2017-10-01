@@ -52,12 +52,16 @@ export default {
   width: 100%;
   background: #eee;
   height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
   transition: .3s;
   transform: translate(-100%, 0);
+  z-index: 100;
 }
 
 .leftMenu.active {
-  transform: translate(0, 0);
+  transform: translate(-20%, 0);
 }
 
 .leftMenu li{
