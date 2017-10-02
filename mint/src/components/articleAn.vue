@@ -2,7 +2,7 @@
   <div class="articleAn">
     <div class="articleAn-Box" v-for="(nav,index) in listStays" :key="nav.title">
       <div class="article-img">
-        <img src="http://ooi407n8x.bkt.clouddn.com/an.jpg" alt="">
+        <img src="http://ooi407n8x.bkt.clouddn.com/an.jpg">
       </div>
       <div class="article-title">
         <a :href="nav.router" target="_blank">
@@ -14,11 +14,12 @@
   </div>
 </template>
 <script>
+import imgNow from '../assets/logo.png'
 
 export default {
   data() {
     return {
-      listStays: this.an
+      listStays: this.an,
     }
   },
   props: ["an"]

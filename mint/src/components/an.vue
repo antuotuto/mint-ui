@@ -16,6 +16,9 @@ export default {
       fronts: fronts
     }
   },
+  methods: {
+
+  },
   components: {
     articleAn
   }

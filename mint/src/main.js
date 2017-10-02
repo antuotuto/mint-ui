@@ -3,10 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
-Vue.use(MintUI)
+Vue.use(ElementUI)
 
 // 默认css样式
 import './assets/css/delay.css'
@@ -21,6 +21,5 @@ new Vue({
   el: '#app',
   router,
   store,
-  template: '<App/>',
-  components: { App }
+  render: h => h(App)
 })

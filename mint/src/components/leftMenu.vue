@@ -6,14 +6,21 @@
       </a>
       <p>王安安</p>
     </div>
-    <ul>
-      <li v-for="(nav,index) in listStays" :key="nav.title" @click="linker">
-        <router-link :to="nav.router">
-          <i class="icon iconfont" :class="nav.icon"></i>
-          <p>{{ nav.title }}</p>
-        </router-link>
-      </li>
-    </ul>
+    <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#3F51B5" text-color="#fff" active-text-color="#ffd04b">
+      <el-menu-item index="1">
+        <i class="el-icon-menu"></i>
+        <span slot="title">导航1</span>
+      </el-menu-item>
+      <el-menu-item index="2">
+        <i class="el-icon-menu"></i>
+        <span slot="title">导航二</span>
+      </el-menu-item>
+      <el-menu-item index="3">
+        <i class="el-icon-setting"></i>
+        <span slot="title">导航三</span>
+      </el-menu-item>
+    </el-menu>
+
   </div>
 </template>
 
@@ -35,6 +42,12 @@ export default {
   methods: {
     linker() {
       this.setLogo(true)
+    },
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath);
     },
     ...mapMutations({
       setLogo: 'SET_LOGO'
@@ -64,8 +77,11 @@ export default {
   transition: .3s;
   transform: translate(-100%, 0);
   z-index: 100;
+  box-sizing: border-box;
+  padding-left: 25%;
+  padding-right: 15px;
   div {
-    padding: 15px 15px 15px 55%;
+    padding: 15px 0;
     text-align: center;
     img {
       width: 100px;
@@ -83,18 +99,13 @@ export default {
       background: #fff;
     }
   }
-  ul {
-    width: 100%;
-    li {
-      padding: 15px 15px 15px 55%;
-      text-align: center;
-    }
-  }
-  a {
-    color: #fff;
-  }
   &.active {
-    transform: translate(-50%, 0);
+    transform: translate(-20%, 0);
   }
+}
+
+
+.el-menu {
+  border: 0;
 }
 </style>

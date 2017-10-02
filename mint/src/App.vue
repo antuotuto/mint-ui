@@ -71,7 +71,6 @@ export default {
 #app {
   height: 100%;
   width: 100%;
-  background: #f0f0f0;
   box-sizing: border-box;
 }
 
@@ -119,7 +118,7 @@ main {
   box-sizing: border-box;
   position: relative;
   &.active {
-    transform: translate(50%, 0);
+    transform: translate(80%, 0);
   }
 }
 

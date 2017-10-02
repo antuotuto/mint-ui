@@ -1,25 +1,15 @@
 <template>
-<div class="home">
-  <mt-swipe :auto="4000">
-    <mt-swipe-item>1</mt-swipe-item>
-    <mt-swipe-item>2</mt-swipe-item>
-    <mt-swipe-item>3</mt-swipe-item>
-  </mt-swipe>
-  <articleContent></articleContent>
-  <articleContent></articleContent>
-  <articleContent></articleContent>
-  <articleContent></articleContent>
-  <articleContent></articleContent>
-</div>
+  <div class="home">
+    <articleContent></articleContent>
+    <articleContent></articleContent>
+    <articleContent></articleContent>
+    <articleContent></articleContent>
+    <articleContent></articleContent>
+  </div>
 </template>
 
 <script>
 import articleContent from '@/components/articleContent.vue'
-
-import {
-  Swipe,
-  SwipeItem
-} from 'mint-ui';
 
 export default {
   data() {
@@ -38,15 +28,29 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.home {
+  background: #f0f0f0;
+  padding: 10px 0;
+}
+
 .mint-swipe {
-  height: 100vw;
-  background: #fff;
+  height: 300px;
+  background: #3F51B5;
+  color:#fff;
+  h1{
+    font-size: 25px;
+    padding:80px 30px 30px 30px;
+  }
+p{
+
+}
+
 }
 
 .homeHeader {
   background: #20A0FF;
-  height:50px;
+  height: 50px;
   width: 100%;
   position: absolute;
   top: 0;
