@@ -6,19 +6,11 @@
       </a>
       <p>王安安</p>
     </div>
-    <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#3F51B5" text-color="#fff" active-text-color="#ffd04b">
-      <el-menu-item index="1">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航1</span>
-      </el-menu-item>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
-      </el-menu-item>
-      <el-menu-item index="3">
-        <i class="el-icon-setting"></i>
-        <span slot="title">导航三</span>
-      </el-menu-item>
+    <el-menu :default-active="$route.path" unique-opened router class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :router="true" :unique-opened="true" background-color="#3F51B5" text-color="#fff" active-text-color="#ffd04b">
+
+  <template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
+      <el-menu-item v-for="child in item.children" :index="child.path" :key="child.path" v-if="!child.hidden">{{child.name}}</el-menu-item>
+      </template>
     </el-menu>
 
   </div>
