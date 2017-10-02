@@ -71,7 +71,6 @@ export default {
 #app {
   height: 100%;
   width: 100%;
-  overflow: hidden;
   background: #f0f0f0;
   box-sizing: border-box;
 }
@@ -117,7 +116,6 @@ main {
   transition: .3s;
   padding-top: 49px;
   height: 100%;
-  overflow-y: scroll;
   box-sizing: border-box;
   position: relative;
   &.active {
@@ -126,7 +124,7 @@ main {
 }
 
 .blank {
-  position: absolute;
+  position:fixed;
   left: 0;
   top: 0;
   height: 100%;

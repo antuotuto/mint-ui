@@ -58,7 +58,7 @@ export default {
   width: 100%;
   background: #3F51B5;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   transition: .3s;
